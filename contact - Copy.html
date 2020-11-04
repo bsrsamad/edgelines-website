@@ -1,0 +1,136 @@
+<?php
+   if(isset($_POST['submit'])){
+       $name=$_POST['name'];
+       $email=$_POST['email'];
+       $sub=$_POST['sub'];
+       $msg=$_POST['msg'];
+  
+       $to='bsrabdulsamad@gmail.com';
+       $subject="subject: ".$sub;
+       $message="name: ".$name."\n\n". "wrote the following: "."\n\n".$msg;
+       $headers="from: ".$email;
+  
+       if(mail($to,$subject,$message,$headers)){
+           echo"<h1> sent successful thank you";
+       } else{
+           echo"something went wrong";
+       }
+   }
+  ?>
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>EDGE LINES | Contact</title>
+        <link rel="shortcut icon" type="image/png" href="assets/img/favicon1.png">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/fonts/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="all">
+
+
+            <!--small band-->
+            <div class="band">
+                <p class="band-par">
+                    <marquee direction="left"> Lorem ipsum dolor sit amet consectetur adipisicing elit. a quam distinctio doloribus? Itaque, culpa!
+                    </marquee>
+                </p>
+            </div>
+            <!-- navbar -->
+            <nav class="nav">
+                <a class="logo" href="./index.html">
+                    <img src="./assets/img/edgemin.png" class="nav-image" height="50px" width="76px" alt="">
+                </a>
+
+                <ol class="nav-items">
+                    <a href="./index.html" class="nav-lin">
+                        <li class="nav-item">Home</li>
+                    </a>
+                    <a href="about.html" class="nav-lin">
+                        <li class="nav-item">About</li>
+                    </a>
+                    <a href="projects.html" class="nav-lin">
+                        <li class="nav-item">Projects</li>
+                    </a>
+                    <a href="contact.html" class="nav-lin">
+                        <li class="nav-item active">contacts</li>
+                    </a>
+
+                </ol>
+            </nav>
+
+            <!-- contact-body -->
+
+            <div class="contact-body">
+                <div class="row contact-body-row">
+                    <!-- <div class="row-body"> -->
+                    <div class="col-md-5 contact-body-1">
+                        <div class="contact-body-heading">
+                            <h1 class="contact-body-head">contact us</h1>
+                        </div>
+                        <div class="contact-body-form">
+                            <form action="" method="POST" class="contact-body-form-group">
+                                <input type="text" class="contact-body-input" name="name" placeholder="Full Name" required>
+
+                                <input type="email" class="contact-body-input" name="email" placeholder="Email" required>
+                                <br>
+                                <input type="text" name="subject" class="contact-body-input contact-body-input-2" placeholder="Sub" required>
+                                <br>
+                                <input type="text" class="contact-body-input contact-body-input-3" name="msg" placeholder="Type your message here..." required>
+                                <input type="submit" name="submit" value="submit" class="contact-body-btn">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-5 contact-body-2">
+                        <img src="./assets/img/phone.png" alt="" class="contact-body-2-img ">
+
+                        <p class="contact-body-2-par"> 500 Terry Francois Street San Francisco, CA 94158</p>
+                        <p class="contact-body-2-par"> bsrabdulsamad@gmail.com</p>
+                        <p class="contact-body-2-par"> +234 8035 7751 10</p>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+
+
+
+
+
+            <!--footer-->
+            <div class="footer">
+                <div class="container">
+                    <div class="footer-container">
+                        <div class="row">
+                            <div class="col-md-6 footer-par">
+                                <p> @edgelines.com</p>
+                            </div>
+                            <div class="col-md-6 footer-link">
+                                <i class="fab fa-facebook-f footer-links"></i>
+                                <i class="fab fa-linkedin-in footer-links"></i>
+                                <i class="fab fa-twitter footer-links"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <script src="assets/js/jquery.js"></script>
+            <script src="assets/js/bootstrap.min.js"></script>
+            <script src="assets/js/popper.js"></script>
+            <script src="assets/js/mine.js"></script>
+    </body>
+
+    </html>
